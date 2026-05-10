@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUATAGORR Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h2>Daftar Akun</h2>
+                <p>Buat Akun Baru Anda</p>
+            </div>
+            
+            <form class="login-form" id="registerForm" novalidate>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="username" name="username" placeholder="Username" required>
+                        <span class="focus-border"></span>
+                    </div>
+                    <span class="error-message" id="usernameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <div class="input-wrapper">
+                        <input type="email" id="email" name="email" placeholder="Email" required autocomplete="email">
+                        <span class="focus-border"></span>
+                    </div>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-wrapper password-wrapper">
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                        <button type="button" class="password-toggle" id="passwordToggle" aria-label="Toggle password visibility">
+                            <span class="eye-icon"></span>
+                        </button>
+                        <span class="focus-border"></span>
+                    </div>
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="input-wrapper password-wrapper">
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+                        <button type="button" class="password-toggle" id="confirmPasswordToggle" aria-label="Toggle password visibility">
+                            <span class="eye-icon"></span>
+                        </button>
+                        <span class="focus-border"></span>
+                    </div>
+                    <span class="error-message" id="confirmPasswordError"></span>
+                </div>
+
+                <button type="submit" class="login-btn btn">
+                    <span class="btn-text">Register</span>
+                    <span class="btn-loader"></span>
+                </button>
+                
+            </form>
+
+            <div class="signup-link">
+                <p>Sudah punya akun? <a href="login.html">Login</a></p>
+            </div>
+
+            <div class="success-message" id="successMessage">
+                <div class="success-icon">✓</div>
+                <h3>Registrasi Berhasil!</h3>
+                <p>Redirecting to home...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../shared/js/form-utils.js"></script>
+    <script src="register.js"></script>
+</body>
+</html>
